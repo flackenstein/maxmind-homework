@@ -1,0 +1,6 @@
+{
+    "default": {
+        "mmdb": "./db/GeoLite2-City.mmdb",
+        "format": "json" // Options: json, pretty
+    }
+}

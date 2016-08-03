@@ -1,0 +1,28 @@
+{
+  "name": "geo-report",
+  "version": "1.0.0",
+  "description": "MaxMind Homework",
+  "main": "geo-report.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "maxmind",
+    "geo",
+    "report",
+    "homework"
+  ],
+  "author": "Warren Flack",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^3.4.1",
+    "config": "^1.21.0",
+    "minimist": "^1.2.0",
+    "mmdb-reader": "^1.0.1",
+    "sqlite3": "^3.1.4",
+    "winston": "^2.2.0"
+  },
+  "devDependencies": {
+    "mocha": "^2.5.3"
+  }
+}
