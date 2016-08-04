@@ -10,7 +10,7 @@ const Promise = require( 'bluebird' ),
         ]
     });
 
-logger.log( 'info', `Geo Report Application - ${ new Date() }` );
+logger.log( 'info', `MaxMind New Hire - Geo Report Application - ${ new Date() }` );
 
 // Declared here so the logger info for the start of the application appears in the correct order.
 const dbh = require( './lib/sqlite_init' ),
@@ -24,6 +24,6 @@ promise
     .bind( dbh ).then( dbh.load_access_log )
     .bind( reports ).then( reports.generate )
     .catch( function( error ) {
-        winston.log( 'error', error );
+        logger.log( 'error', error );
         argv.help();
     });
