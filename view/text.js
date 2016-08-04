@@ -4,6 +4,7 @@ const table = require( 'text-table' );
 
 module.exports = function( report_data ) {
     return new Promise( function( resolve, reject ) {
+        let report_array = [];
 
         report_data.map( function( report ) {
             let keys, table_data = [], text, report_text;
@@ -33,11 +34,14 @@ module.exports = function( report_data ) {
             // Report template
             report_text = `\n[Report: ${ report.title }]\n\n${ text }\n`;
 
+            // Store reports for future use...
+            report_array.push( report_text );
+
             // Output text report
             console.log( report_text );
 
         });
 
-        resolve( report_text );
+        resolve( report_array );
     });
 };

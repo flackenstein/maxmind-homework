@@ -25,4 +25,5 @@ permissions - Example "chmod +x geo-report"
 1. Node.js: node geo-reports.js -l "path-to-access.log-file" -m "optional-path-to-mmdb-geo-database" -f "optional-format-[json, pretty]"
 2. Bash: ./geo-reports -l "path-to-access.log-file" -m "optional-path-to-mmdb-geo-database" -f "optional-format-[json, pretty]"
 
-
+**Defaults:**
+Default option values can be configured via the config/defaults.json file.
