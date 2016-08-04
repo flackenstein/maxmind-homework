@@ -16,7 +16,7 @@ The geo-report appliction was tested using Linux / Mac which by default include 
 been tested on Windows.
 
 **Setup:**
-This is a node.js applicatio, source code does not include the node module dependencies.  Must run "npm install" from 
+This is a node.js application, source code does not include the node module dependencies.  Must run "npm install" from 
 root folder prior to executing "geo-report.js" to install node dependencies.  Make sure geo-report has execute
 permissions - Example "chmod +x geo-report"
 
@@ -27,3 +27,26 @@ permissions - Example "chmod +x geo-report"
 
 **Defaults:**
 Default option values can be configured via the config/defaults.json file.
+
+**Report Templates:**
+Reports are stored in lib/sql_reports file.  To add additional reports, append JSON object to the reports array using
+the following format: { title: "report title", sql: "report query" }
+
+**Sqlite Schema:**
+The following fields are used to store the Apache access.log file and geo meta data and can be queried for additional
+reports.  Data is volatile and will be destroyed on exit.
+
+    ipv4 VARCHAR(15),
+    user VARCHAR(50),
+    timestamp DATETIME,
+    http_method VARCHAR(10),
+    resource text,
+    http_version NUMERIC,
+    http_status INT,
+    http_size INT,
+    client text,
+    geo_city VARCHAR(50),
+    geo_state_short VARCHAR(50),
+    geo_state_full VARCHAR(50),
+    geo_country VARCHAR(50),
+    geo_continent VARCHAR(50)
